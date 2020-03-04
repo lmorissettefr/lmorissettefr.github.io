@@ -18,15 +18,17 @@
   <script type="text/javascript">
     function OFSYS_Tracking_onload()
                 {
-                   // DI.Journey.Set("OFSYSDebug", "1");
-                    DI.Journey.Set("OFSYSDebugProcess", "1");
-                    console.log('tracking onload');
-                    DI.Journey.Track();
-                    OFSYS_Tracker2.Set("idContact", "1");
-                   OFSYS_Tracker2.Set("clKey", "TEcq9T");
-    
-    
-                    DI.Journey.ECommerce.ProductView('1'); 
+                     DI.Journey.ECommerce.ProductView({
+                    idProduct :'1',
+                    Product : {//Non requis
+                    idProduct : '1',
+                    idCategory : '1',
+                    ProductName : 'catégofr 1',
+                    },
+                    Category: {//Non requis
+                    idCategory : '2',   
+                    CategoryName : 'catégofr 2'
+                    }}); 
                 }
     
     </script>
