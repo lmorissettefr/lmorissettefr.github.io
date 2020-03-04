@@ -13,12 +13,22 @@
 	
 <p> QAFR [1173] Projet [44] </p>
 <p> Site parcours </p>
+<p>Product Visit Site Githubfr  idSite 303 </p>
 	
 <script type="text/javascript" src="https://t.mydialoginsight.com/js/Journey/1/lQQAAGhTeHY4eSwAAAB4eDVBNTAvAQAA/DI.Journey-min.js"></script>
   <script type="text/javascript">
     function OFSYS_Tracking_onload()
                 {
-                     DI.Journey.ECommerce.ProductView({
+                   // DI.Journey.Set("OFSYSDebug", "1");
+                    DI.Journey.Set("OFSYSDebugProcess", "1");
+                    console.log('tracking onload');
+                    DI.Journey.Track();
+                    OFSYS_Tracker2.Set("idContact", "1");
+                   OFSYS_Tracker2.Set("clKey", "TEcq9T");
+    
+    
+                    
+                    DI.Journey.ECommerce.ProductView({
                     idProduct :'1',
                     Product : {//Non requis
                     idProduct : '1',
